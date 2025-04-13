@@ -15,12 +15,12 @@ class MyCollector(pyblish.ContextPlugin):
             instance.data["family"] = "asset"
 
 class ValidateContents(pyblish.InstancePlugin):
-  """Ensure rig has the appropriate object sets"""
+    """Ensure rig has the appropriate object sets"""
 
-  order = pyblish.ValidatorOrder
-  families = ["asset"]
+    order = pyblish.ValidatorOrder
+    families = ["asset"]
 
-  def process(self, instance):
-    self.log.info("Extracting: %s" % instance)
-    #assert "controls_SEL" in instance, "%s is missing a controls set" % instance
-    #assert "pointcache_SEL" in instance, "%s is missing a pointcache set" % instance
+    def process(self, instance):
+        self.log.info("Extracting: %s" % instance)
+        #assert "controls_SEL" in instance, "%s is missing a controls set" % instance
+        #assert "pointcache_SEL" in instance, "%s is missing a pointcache set" % instance
