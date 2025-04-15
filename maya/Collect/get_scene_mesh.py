@@ -10,6 +10,8 @@ class getSceneMesh(pyblish.ContextPlugin):
 
         from maya import cmds
         shapes= cmds.ls(g=1)
+        #FOR shape IN SHAPES
+            # REMOVE
         assert len(shapes)>0,"No mesh!"
         for shape in shapes:
             instance = context.create_instance(shape)
